@@ -65,7 +65,7 @@ const toggleButtonHoverStyle = {
 
 // Professional styling for the search bar and input field
 const searchBarStyle = {
-  width: "74%",
+  width: "100%",
   padding: "10px 15px",
   borderRadius: "30px",
   border: "2px solid #fff",
@@ -261,7 +261,7 @@ const HospitalGlobe = ({ hospitals }) => {
             }}
             onClick={() => {}}
           >
-            <FaSearch />
+            <FaSearch style={{marginTop: "4px"}}/>
           </button>
           <input
             type="text"
