@@ -1,0 +1,109 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #121212; /* Dark background */
+    line-height: 1.6;
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Dynamic Island NavBar */
+.dynamic-navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.6); /* Dark background with opacity */
+    backdrop-filter: blur(15px); /* Glassy effect */
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.3); /* Dark shiny shadow */
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for contrast */
+}
+
+.dynamic-navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.dynamic-navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dynamic-navbar-logo {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: auto;
+    padding-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.dynamic-navbar-logo:hover {
+    color: #1E90FF; /* Color transition on hover */
+}
+
+.dynamic-navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.dynamic-navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 7px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.dynamic-navbar-links li a:hover {
+    color:  #77b4fa; /* Dark text for contrast */
+    transform: translateY(-2px); /* Small hover lift effect */
+}
+
+.dynamic-navbar-links li a:active {
+    transform: translateY(2px); /* Slight press effect */
+}
+
+/* Hover Effect: Enlarge on Interaction */
+.dynamic-navbar:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dynamic-navbar {
+        width: 95%;
+        top: 10px;
+    }
+
+    .dynamic-navbar-links {
+        gap: 1rem;
+    }
+
+    .dynamic-navbar-logo {
+        font-size: 1.4rem;
+    }
+
+    .dynamic-navbar-links li a {
+        font-size: 0.95rem;
+        padding: 8px 15px;
+    }
+}

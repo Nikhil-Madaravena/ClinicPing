@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HospitalGlobe from './components/HospitalGlobe'; // Your main page
 import HospitalMap from './components/HospitalMap'; // The new map page
+import Navbar from './components/Navbar'; // Your Navbar component
 const App = () => {
   const hospitalData = [
     // USA
@@ -203,15 +204,16 @@ const App = () => {
   ];
   
 
-    return (
-      <Router>
-        <Routes>
-          <Route path="/" element={<HospitalGlobe hospitals={hospitalData} />} />
-          <Route path="/hospital-map/:hospitalName" element={<HospitalMap hospitals={hospitalData} />} />
-        </Routes>
-      </Router>
-    );
-  };
-  
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HospitalGlobe hospitals={hospitalData} />} />
+        <Route path="/hospital-globe" element={<HospitalGlobe hospitals={hospitalData} />} />
+        <Route path="/hospital-map/:hospitalName" element={<HospitalMap hospitals={hospitalData} />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 // Your styles
 const sidebarStyle = (isSidebarOpen) => ({
   top: "60px",
-  width: isSidebarOpen ? "250px" : "0px",
+  width: isSidebarOpen ? "280px" : "0px",
   padding: isSidebarOpen ? "20px" : "0px",
   backgroundColor: "rgba(0, 0, 0, 0.85)",
   color: "#fff",
@@ -65,7 +65,7 @@ const toggleButtonHoverStyle = {
 
 // Professional styling for the search bar and input field
 const searchBarStyle = {
-  width: "68%",
+  width: "74%",
   padding: "10px 15px",
   borderRadius: "30px",
   border: "2px solid #fff",
@@ -250,7 +250,7 @@ const HospitalGlobe = ({ hospitals }) => {
   };
 
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
+    <div style={{ display: "flex", height: "100vh", backgroundColor: "#000" }}>
       <div style={sidebarStyle(isSidebarOpen)}>
         <h3 style={titleStyle}>Search Hospitals</h3>
         <div style={{ position: "relative" }}>
@@ -265,7 +265,7 @@ const HospitalGlobe = ({ hospitals }) => {
           </button>
           <input
             type="text"
-            placeholder="Search by name, address, or service..."
+            placeholder="Search Hospitals..."
             value={searchQuery}
             onChange={handleSearchChange}
             style={{
