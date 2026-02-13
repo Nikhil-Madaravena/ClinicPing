@@ -1,6 +1,3 @@
-
-
-```md
 # 🏥 ClinicPing  
 ## Intelligent Healthcare Navigation & Recursive Appointment System
 
@@ -66,7 +63,6 @@ Real-time visibility of hospital resources (ICU, MRI, OT, departments) empowers 
 
 ## 🧠 System Architecture (Judge-Friendly)
 
-```
 
 Frontend (React + Three.js + Tailwind)
 |
@@ -85,8 +81,6 @@ Core Logic Layer
   |
   v
   Real-Time Services (WebSockets / Firebase)
-
-```
 
 ---
 
@@ -167,17 +161,3 @@ it is an **intelligent healthcare navigation layer** designed to reduce delays, 
 - Hackathons & innovation challenges
 - Smart healthcare systems
 - Scalable real-world deployment
-
-⭐ If you like this project, **give it a star** and help us redefine healthcare navigation.
-```
-
----
-
-If you want next, I can:
-
-* 🔥 Add **“How We Built It” (Hackathon slide style)**
-* 📸 Add **README image/diagram placeholders**
-* 🧪 Add **API endpoints & sample requests**
-* 🏆 Write a **judge pitch (30–60 sec)**
-
-Just say the word 💥
