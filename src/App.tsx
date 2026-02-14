@@ -1,4 +1,4 @@
-import { CheckCircle2, Shield, Zap, Clock } from 'lucide-react'
+import { CheckCircle2, Shield, Zap, Clock, Lock, Activity, User, Building2, Calendar, MapPin } from 'lucide-react'
 
 export default function App() {
   return (
@@ -38,14 +38,14 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-24 px-4 sm:px-6 lg:px-8 bg-background">
+      <section className="pt-32 pb-32 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             {/* Left Content */}
-            <div className="space-y-8">
+            <div className="space-y-10">
               <div>
-                <div className="inline-block mb-6">
-                  <span className="px-3 py-1.5 text-xs font-medium text-primary border border-primary/30 rounded-full">
+                <div className="inline-block mb-8">
+                  <span className="px-4 py-2 text-xs font-semibold text-foreground/60 border border-foreground/20 rounded-full bg-white/40">
                     Smart Healthcare Navigation
                   </span>
                 </div>
@@ -55,41 +55,35 @@ export default function App() {
                 </h1>
               </div>
               
-              <p className="text-lg text-foreground/65 max-w-lg leading-relaxed font-light">
+              <p className="text-lg text-foreground/60 max-w-lg leading-relaxed font-light">
                 Real-time visibility into hospital capacity, verified providers, and intelligent routing that finds the right care at the right time.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                <button className="px-7 py-3 bg-primary text-primary-foreground rounded-full font-medium text-base hover:bg-primary/90 transition">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <button className="px-8 py-3 bg-[#2d5a50] text-white rounded-full font-medium text-base hover:bg-[#234540] transition duration-200">
                   Explore ClinicPing
                 </button>
-                <button className="px-7 py-3 border border-border text-foreground rounded-full font-medium text-base hover:bg-secondary/5 transition">
+                <button className="px-8 py-3 border border-foreground/20 text-foreground rounded-full font-medium text-base hover:bg-foreground/5 transition duration-200">
                   See How It Works
                 </button>
               </div>
             </div>
             
             {/* Right Visual - Minimalist Product Visual */}
-            <div className="relative h-96 lg:h-full flex items-center justify-center">
+            <div className="relative h-96 lg:h-full flex items-center justify-center p-8">
               <div className="relative w-full max-w-sm h-96 flex items-center justify-center">
-                {/* Subtle background glow */}
-                <div className="absolute inset-0 bg-gradient-to-b from-primary/8 to-transparent rounded-3xl blur-3xl" />
+                {/* Top capsule */}
+                <div className="absolute top-0 w-14 h-28 bg-[#2d5a50] rounded-full shadow-lg" />
                 
-                {/* Central element - Healthcare icon representation */}
-                <div className="relative flex flex-col items-center justify-center gap-6">
-                  {/* Top capsule */}
-                  <div className="w-12 h-20 bg-primary rounded-full shadow-xl" />
-                  
-                  {/* Center circle with crosshair */}
-                  <div className="relative w-32 h-32 rounded-full border-2 border-primary/20 flex items-center justify-center">
-                    <div className="w-0.5 h-12 bg-primary/40" />
-                    <div className="w-12 h-0.5 bg-primary/40 absolute" />
-                    <div className="w-2 h-2 bg-primary rounded-full" />
-                  </div>
-                  
-                  {/* Bottom capsule */}
-                  <div className="w-12 h-20 bg-primary rounded-full shadow-xl" />
+                {/* Center circle with crosshair */}
+                <div className="relative w-40 h-40 rounded-full border-2 border-foreground/15 flex items-center justify-center">
+                  <div className="w-0.5 h-16 bg-foreground/20" />
+                  <div className="w-16 h-0.5 bg-foreground/20 absolute" />
+                  <div className="w-2.5 h-2.5 bg-[#2d5a50] rounded-full" />
                 </div>
+                
+                {/* Bottom capsule */}
+                <div className="absolute bottom-0 w-14 h-28 bg-[#2d5a50] rounded-full shadow-lg" />
               </div>
             </div>
           </div>
@@ -128,46 +122,67 @@ export default function App() {
       </section>
 
       {/* Core Modules Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background">
+      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
-            <h2 className="text-5xl lg:text-6xl font-light text-foreground mb-4 text-balance">
-              Four Pillars of Connected Care.
+          <div className="mb-20">
+            <div className="mb-4">
+              <span className="text-xs font-semibold tracking-widest text-foreground/50 uppercase">Core Platform Modules</span>
+            </div>
+            <h2 className="text-5xl lg:text-6xl font-light text-foreground text-balance">
+              Four Intelligent Layers
             </h2>
-            <p className="text-lg text-foreground/65 max-w-2xl font-light">
-              Integrated modules working together to streamline healthcare delivery and improve access.
-            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: "Doctor's Network",
-                description: "Verified provider profiles with real-time availability, specializations, and patient feedback.",
+                icon: User,
+                title: "Doctor's Desk",
+                description: "Verified physician profiles with real-time availability, specialty filters, and patient reviews.",
+                features: ['Verified credentials', 'Live scheduling', 'Smart matching']
               },
               {
-                title: "Hospital Intelligence",
-                description: "Live dashboards of ICU capacity, equipment availability, and facility status across your network.",
+                icon: Building2,
+                title: "Hospital Intelligence Dashboard",
+                description: "Real-time visibility into ICU beds, equipment status, wait times, and facility capacity.",
+                features: ['Live bed tracking', 'Equipment status', 'Crowd analytics']
               },
               {
-                title: "Smart Scheduling",
-                description: "Recursive routing that automatically finds optimal appointment slots and fallback options.",
+                icon: Calendar,
+                title: "Recursive Appointment Engine",
+                description: "Automatic fallback scheduling that cascades to alternative providers when primary slots are unavailable.",
+                features: ['Auto-cascading', 'Smart rebooking', 'Zero dead ends']
               },
               {
-                title: "Care Navigation",
-                description: "Geo-aware routing that guides patients to the nearest appropriate facility in real-time.",
+                icon: MapPin,
+                title: "Geo-Based Care Navigation",
+                description: "Interactive map-based discovery of nearby healthcare providers with intelligent routing.",
+                features: ['Location-aware', 'Multi-modal routing', 'Proximity scoring']
               }
-            ].map((module, idx) => (
-              <div
-                key={idx}
-                className="group p-8 rounded-2xl bg-white border border-border/40 hover:border-border/80 hover:shadow-md transition-all duration-300 cursor-pointer"
-              >
-                <div className="space-y-3">
-                  <h3 className="text-xl font-semibold text-foreground">{module.title}</h3>
-                  <p className="text-foreground/65 text-sm leading-relaxed">{module.description}</p>
+            ].map((layer, idx) => {
+              const Icon = layer.icon;
+              return (
+                <div
+                  key={idx}
+                  className="p-8 rounded-3xl bg-white border border-border/50 hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="flex items-start gap-4 mb-5">
+                    <div className="w-12 h-12 rounded-xl bg-[#2d5a50] flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground leading-tight pt-0.5">{layer.title}</h3>
+                  </div>
+                  <p className="text-foreground/65 text-sm leading-relaxed mb-5">{layer.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {layer.features.map((feature, featureIdx) => (
+                      <span key={featureIdx} className="px-3 py-1.5 bg-foreground/8 text-foreground/70 text-xs font-medium rounded-full border border-foreground/10">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -220,41 +235,53 @@ export default function App() {
       </section>
 
       {/* Trust Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background">
+      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
-            <h2 className="text-5xl lg:text-6xl font-light text-foreground mb-4">
-              Enterprise Trust. Healthcare Grade.
+          <div className="mb-24 text-center">
+            <div className="inline-block mb-8">
+              <span className="px-4 py-2 text-xs font-semibold tracking-widest text-foreground/50 bg-white/40 rounded-full">
+                TRUST & INFRASTRUCTURE
+              </span>
+            </div>
+            <h2 className="text-5xl lg:text-6xl font-light text-foreground mb-6 text-balance">
+              Built on Clinical-Grade Security
             </h2>
-            <p className="text-lg text-foreground/65 max-w-2xl font-light">
-              Built from the ground up for healthcare's most demanding requirements.
+            <p className="text-lg text-foreground/60 max-w-2xl mx-auto font-light">
+              Healthcare data demands the highest security standards. ClinicPing is designed with HIPAA compliance and enterprise reliability at its core.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
             {[
               {
                 icon: Shield,
-                title: 'HIPAA Compliant',
-                description: 'Full encryption and compliance with healthcare privacy standards.'
+                title: 'End-to-End Encryption',
+                description: 'All patient data encrypted in transit and at rest with AES-256 standards.'
               },
               {
                 icon: Zap,
-                title: 'Real-Time Sync',
-                description: 'Sub-millisecond latency for critical availability and patient data.'
+                title: 'Real-Time Data Sync',
+                description: 'Live hospital capacity and doctor availability updated every 30 seconds.'
               },
               {
-                icon: Clock,
-                title: '99.99% Uptime',
-                description: 'Enterprise redundancy ensuring healthcare access when needed.'
+                icon: Lock,
+                title: 'Secure Authentication',
+                description: 'Multi-factor authentication and role-based access control across the platform.'
+              },
+              {
+                icon: Activity,
+                title: '99.9% Uptime SLA',
+                description: 'Enterprise-grade infrastructure built on redundant cloud architecture.'
               }
             ].map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div key={idx} className="p-8 rounded-2xl bg-white border border-border/40">
-                  <Icon className="w-7 h-7 text-primary mb-4" />
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-foreground/65 text-sm leading-relaxed">{item.description}</p>
+                <div key={idx} className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-8 shadow-sm">
+                    <Icon className="w-8 h-8 text-foreground/70 stroke-1.5" />
+                  </div>
+                  <h3 className="text-base font-semibold text-foreground mb-3">{item.title}</h3>
+                  <p className="text-foreground/60 text-sm leading-relaxed">{item.description}</p>
                 </div>
               );
             })}
@@ -283,50 +310,71 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 bg-background px-4 sm:px-6 lg:px-8 py-16">
+      <footer className="bg-[#1f3a2f] text-white px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-            {[
-              {
-                title: 'Product',
-                links: ['Features', 'Pricing', 'Security', 'Roadmap']
-              },
-              {
-                title: 'Company',
-                links: ['About', 'Blog', 'Careers', 'Contact']
-              },
-              {
-                title: 'Resources',
-                links: ['Documentation', 'API Docs', 'Support', 'Status Page']
-              },
-              {
-                title: 'Legal',
-                links: ['Privacy Policy', 'Terms of Service', 'HIPAA', 'Compliance']
-              }
-            ].map((group, idx) => (
-              <div key={idx}>
-                <h4 className="font-semibold text-foreground text-sm mb-4">{group.title}</h4>
-                <ul className="space-y-2">
-                  {group.links.map((link, linkIdx) => (
-                    <li key={linkIdx}>
-                      <a href="#" className="text-foreground/60 hover:text-foreground transition text-sm">
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+          {/* Top Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
+            {/* Brand Section */}
+            <div className="lg:col-span-1">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-5 h-5 rounded-full bg-white/30" />
+                <span className="text-lg font-semibold">ClinicPing</span>
               </div>
-            ))}
-          </div>
-          
-          <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-foreground/50 text-sm font-light">
-              © 2026 ClinicPing. All rights reserved.
+              <p className="text-white/70 text-sm leading-relaxed">
+                AI-powered healthcare navigation infrastructure for intelligent care access.
+              </p>
             </div>
-            <div className="flex items-center gap-8">
-              <a href="#" className="text-foreground/60 hover:text-foreground transition text-sm font-medium">Twitter</a>
-              <a href="#" className="text-foreground/60 hover:text-foreground transition text-sm font-medium">LinkedIn</a>
-              <a href="#" className="text-foreground/60 hover:text-foreground transition text-sm font-medium">GitHub</a>
+
+            {/* Links Columns */}
+            <div>
+              <h4 className="font-semibold text-white text-sm mb-4">Platform</h4>
+              <ul className="space-y-3">
+                {['Features', 'How It Works', 'Security', 'API Docs'].map((link, idx) => (
+                  <li key={idx}>
+                    <a href="#" className="text-white/70 hover:text-white transition text-sm">
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-white text-sm mb-4">Company</h4>
+              <ul className="space-y-3">
+                {['About', 'Careers', 'Press Kit', 'Contact'].map((link, idx) => (
+                  <li key={idx}>
+                    <a href="#" className="text-white/70 hover:text-white transition text-sm">
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-white text-sm mb-4">Legal</h4>
+              <ul className="space-y-3">
+                {['Privacy Policy', 'Terms of Service', 'HIPAA Compliance', 'Cookie Policy'].map((link, idx) => (
+                  <li key={idx}>
+                    <a href="#" className="text-white/70 hover:text-white transition text-sm">
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-white/60 text-sm">
+              © 2024 ClinicPing. All rights reserved.
+            </div>
+            <div className="flex items-center gap-6">
+              <a href="#" className="text-white/70 hover:text-white transition text-sm">Twitter</a>
+              <a href="#" className="text-white/70 hover:text-white transition text-sm">LinkedIn</a>
+              <a href="#" className="text-white/70 hover:text-white transition text-sm">GitHub</a>
             </div>
           </div>
         </div>
