@@ -6,7 +6,7 @@
 
 ---
 
-## 🌟 Why ClinicPing Stands Out (For Judges)
+## 🌟 Why ClinicPing Stands Out 
 
 🔹 **Problem-Solving Depth**  
 Healthcare access is fragmented — users juggle multiple apps to find doctors, facilities, and appointments.  
@@ -61,7 +61,7 @@ Real-time visibility of hospital resources (ICU, MRI, OT, departments) empowers 
 
 ---
 
-## 🧠 System Architecture (Judge-Friendly)
+## 🧠 System Architecture
 
 
 Frontend (React + Three.js + Tailwind)
@@ -156,8 +156,3 @@ it is an **intelligent healthcare navigation layer** designed to reduce delays, 
 > **Right Care. Right Place. Right Time.**
 
 ---
-
-## 👨‍💻 Built For
-- Hackathons & innovation challenges
-- Smart healthcare systems
-- Scalable real-world deployment
